@@ -1,4 +1,4 @@
-public class Ejerciciouno{
+public class Tallerclase{
 
 
 
@@ -128,6 +128,12 @@ public static void main (String []args){
      double volumenM3 = largo * ancho * alto;
      double densidad = masaCargaKg / volumenM3;
      double ocupacion = volumenM3  / volCamionM3;
+
+     System.out.println("volumenM3 = " + volumenM3);
+     System.out.println("densidad =" + densidad);
+     System.out.println("ocupacion =" + ocupacion);
+
+
 
 
 
