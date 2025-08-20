@@ -66,7 +66,7 @@ public static void main (String []args){
     System.out.println("cb = " + cb);
     System.out.println("a = " + a);
     System.out.println("b = " + b);
-    
+    System.out.println("c = " + c);
 
     System.out.println("d1 ="+ d1);
     System.out.println( "d2 =" + d2);
@@ -85,12 +85,12 @@ public static void main (String []args){
      double v1 = d1 / t1;
      double v2 = d2 / t2;
      double v3 = d3 / t3;
-     double vProm = d1 * v1 + d2 * v2 + d3 * v3 / d1 + d2 + d3;
+     double vProm = (d1 * v1 + d2 * v2 + d3 * v3) / (d1 + d2 + d3);
 
      double kml1 = d1 / l1;
      double kml2 = d2 / l2;
      double kml3 = d3 / l3;
-     double kmTotal = d1 + d2 + d3 / l1 + l2 + l3; 
+     double kmTotal = (d1 + d2 + d3) / (l1 + l2 + l3); 
      System.out.println("Velocidades");
      System.out.println("v1 =" + v1);
      System.out.println("v2 =" + v2);
@@ -132,6 +132,70 @@ public static void main (String []args){
      System.out.println("volumenM3 = " + volumenM3);
      System.out.println("densidad =" + densidad);
      System.out.println("ocupacion =" + ocupacion);
+
+     //Punto 5
+      System.out.println("------------------------");
+      System.out.println("Punto numero 5");
+
+       double  co2Total = (l1 +l2 + l3) * fCO2;
+       double co2PorKm = co2Total / (d1 + d2 + d3);
+       System.out.println("co2Total = " + co2Total);
+       System.out.println("co2PorKm = " + co2PorKm);
+
+    //Punto 6
+    System.out.println("------------------------");
+    System.out.println("Punto numero 6");
+    double vMsProm = vProm * 1000 / 3600;
+    double GalTot = (l1 +l2 + l3) * galPorLitro;
+    double vNorm = (vProm - vmin) / (vmax - vmin);
+    System.out.println("vMsProm =" + vMsProm);
+    System.out.println("GalTot =" + GalTot);
+    System.out.println("vNorm =" + vNorm);
+
+
+    //Punto 7
+    System.out.println("------------------------");
+    System.out.println("Punto numero 7");
+    double vmedia = (v1 + v2 + v3) / 3;
+    double sigma = Math.sqrt((Math.pow(v1 - vmedia , 2) + Math.pow(v2 - vmedia , 2) + Math.pow(v3 - vmedia , 2)) / 3) ;
+    double vPondt = (t1 * v1 + t2 * v2 + t3 * v3) / (t1 + t2 + t3);
+    System.out.println("Sigma (ó) = " + sigma);
+    System.out.println("vPond_t = " + vPondt);
+
+
+    //Punto 8
+    System.out.println("------------------------");
+    System.out.println("Punto numero 8");
+    double cvProm = ca + (cb - ca) * (vProm - va) / (vb - va);
+    double costoMant = cvProm * (d1 + d2 + d3);
+    System.out.println("c(vProm) = " + cvProm);
+    System.out.println("costoMant =" + costoMant);
+
+
+    //Punto 9
+    System.out.println("------------------------");
+    System.out.println("Punto numero 9");
+    double kmlModelo = a * Math.pow(vProm, 2) + b * vProm + c;
+    double litrosModelo = (d1 + d2 + d3) / kmlModelo;
+     System.out.println("kmlModelo =" + kmlModelo);
+     System.out.println("litrosModelo =" + litrosModelo);
+
+    
+     //Punto 10 
+     System.out.println("------------------------");
+     System.out.println("Punto numero 10");
+     System.out.println(" w1 + w2 + w3 + w4 = 1");
+     double w1 = 0.25f , w2 = 0.25f , w3 = 0.25f , w4 = 0.25f; 
+     double score = w1 * 1 / costoPorKm + w2 * kmTotal + w3 * 1 / co2PorKm + w4 * 1 / (1 + sigma);
+     System.out.println("Score = " + score);
+     
+
+
+
+
+   
+
+
 
 
 
