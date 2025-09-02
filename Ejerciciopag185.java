@@ -1,4 +1,4 @@
-public class Ejercicio185 {
+public class Ejerciciopag185 {
 
 
     public static void main(String[] args) {
@@ -58,7 +58,7 @@ public class Ejercicio185 {
         System.out.println("-----------------------------------");
         //Punto d
         System.out.println("Punto d");
-
+        
         int x = 10;
         int y = 8;
         int z = 12; 
@@ -67,25 +67,7 @@ public class Ejercicio185 {
         
         }else{
             System.out.println("No se le puede dar vaor a P porque no cumple las condiciones dadas");
-
         }
- 
-        
-            
-        
-
-
-        
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     }
 
@@ -101,6 +83,6 @@ public class Ejercicio185 {
 
 
 
-    }
+}
     
 
