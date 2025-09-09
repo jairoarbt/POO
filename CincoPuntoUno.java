@@ -25,6 +25,17 @@ public class CincoPuntoUno {
         }
         //Cerrar el objeto de la clase Scanner
         leer.close();
+
+
+        System.out.println("----------------------------");
+
+        //punto 5.2
+        System.out.println("Punto 5.2");
+
+
+
+
+
     }
 }
 
