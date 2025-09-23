@@ -1,5 +1,5 @@
 public class EjecutarPersonaGrupouno {
-     public static void main(String[] args) {
+    public static void main(String[] args) {
         
         //Forma1
         //Creación del objeto objPersona1
@@ -15,13 +15,20 @@ public class EjecutarPersonaGrupouno {
 
         System.out.println(objPersona2.toString());
 
+        System.out.println("\n--- Métodos nuevos ---");
 
+        // Saludar
+        System.out.println(objPersona1.saludar());
+        System.out.println(objPersona2.saludar());
+
+        // Mayor de edad
+        System.out.println(objPersona1.getNombre() + " es mayor de edad? " + objPersona1.esMayorDeEdad());
+        System.out.println(objPersona2.getNombre() + " es mayor de edad? " + objPersona2.esMayorDeEdad());
+
+        // IMC
+        System.out.println(objPersona1.getNombre() + " tiene un IMC de: " + objPersona1.calcularIMC());
+        System.out.println(objPersona2.getNombre() + " tiene un IMC de: " + objPersona2.calcularIMC());
+        
     }
-
-
-
-
-
-
-
 }
+       
