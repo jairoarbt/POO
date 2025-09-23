@@ -6,30 +6,36 @@ public class Persona {
     private int edad;
     private int cedula;
     private double peso;
+    private double altura;
 
     // Método Constructor de la Clase
     // El constructor de la clase permite inicializar la clase
     // El constructor de la una clase se reconoce porque tiene el mismo nombre de la
     // clase
     // El operador this es una autoreferencia al atributo de la clase
-    public Persona(String nombre, String apellido, int edad, int cedula, double peso) {
+    public Persona(String nombre, String apellido, int edad, int cedula, double peso, double altura) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
         this.cedula = cedula;
         this.peso = peso;
+        this.altura = altura;
+
+    
     }
 
     //El método toString sirve para visualizar los objetos
     public String toString() {
         return "Persona [ Nombre: " + nombre + " Apellido: " + apellido +
-                " Edad: " + edad + " Cédula: " + cedula + " Peso: " + peso + "]";
+                " Edad: " + edad + " Cédula: " + cedula + " Peso: " + peso + "altura " + altura + "]";
+    }
 
 
 
                 
     
-    // Métodos nuevos añadidos
+    // Métodos nuevos
+
     
      
     public String getNombre() { return nombre; }
@@ -47,8 +53,8 @@ public class Persona {
     public double getPeso() { return peso; }
     public void setPeso(double peso) { this.peso = peso; }
 
-    public double getAltura() { return altura; }
-    public void setAltura(double altura) { this.altura = altura; }
+    
+    
 
     // Método saludar
     public String saludar() {
