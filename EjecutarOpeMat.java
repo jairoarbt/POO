@@ -1,8 +1,11 @@
 public class EjecutarOpeMat {
 
     public static void main(String[] args) {
+        
         //crear objeto 
-        OperacionesMatematicas objOpe = new OperacionesMatematicas(5, 6);
+        OperacionesMatematicas objOpe = new OperacionesMatematicas(5 , 6);
+
+        
 
         //acceder el objeto
         
