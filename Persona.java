@@ -16,7 +16,7 @@ public class Persona {
     public Persona(String nombre, String apellido, int edad, int cedula, double peso, double altura) {
         this.nombre = nombre;
         this.apellido = apellido;
-        this.edad = edad;
+        this.edad = edad;        
         this.cedula = cedula;
         this.peso = peso;
         this.altura = altura;
