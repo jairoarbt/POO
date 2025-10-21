@@ -61,7 +61,7 @@ public class CuentaBancaria {
     }
     
     // Método toString
-    @Override
+    
     public String toString() {
         return "Cuenta Bancaria:" +
                "Titular: " + titular +  
