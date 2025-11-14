@@ -5,7 +5,7 @@ public class Edificio {
 
     public Edificio() {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Ingrese la cantidad de pisos del edificio: ");
+        System.out.print("Ingrese la cantidad de pisos que tiene el edificio: ");
         int cantidadPisos = sc.nextInt();
         sistemaControl = new SistemaControl(cantidadPisos);
     }

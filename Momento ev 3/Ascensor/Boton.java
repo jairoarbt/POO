@@ -16,12 +16,12 @@ public class Boton {
 
     public void encender() {
         iluminado = true;
-        System.out.println("Botón " + nombre + " encendido.");
+        System.out.println("Botón esta " + nombre + " encendido.");
     }
 
     public void apagar() {
         iluminado = false;
-        System.out.println("Botón " + nombre + " apagado.");
+        System.out.println("Botón esta " + nombre + " apagado.");
     }
 }
 

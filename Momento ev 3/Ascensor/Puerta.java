@@ -21,10 +21,10 @@ public class Puerta {
         double probabilidad = Math.random(); // número entre 0.0 – 1.0
 
         if (probabilidad < 0.03) { // 3% de probabilidad de obstáculo
-            System.out.println("⚠️ No se puede cerrar la puerta, hay un obstáculo en el sensor.");
+            System.out.println(" No se puede cerrar la puerta, hay un obstáculo en el sensor.");
             return; // evita el cierre por seguridad
         }
-        // ----------------------------------------
+        
 
         if (abierta) {
             System.out.println("La puerta se está cerrando...");

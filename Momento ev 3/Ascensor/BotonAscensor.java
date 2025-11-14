@@ -8,7 +8,7 @@ public class BotonAscensor extends Boton {
     @Override
     public void presionar() {
         super.presionar();
-        System.out.println(" Botón interno seleccionado para el piso " + pisoDestino);
+        System.out.println(" Botón seleccionado para el piso " + pisoDestino);
     }
 
     public int getPisoDestino() {

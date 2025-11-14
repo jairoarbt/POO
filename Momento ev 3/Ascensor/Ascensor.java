@@ -5,7 +5,7 @@ public class Ascensor {
 
     public Ascensor() {
         this.pisoActual = 1;
-        this.direccion = "ninguna";
+        this.direccion = "Ninguna";
         this.puerta = new Puerta();
     }
 
@@ -17,15 +17,15 @@ public class Ascensor {
         }
 
         puerta.cerrarPuerta();
-        direccion = (pisoDestino > pisoActual) ? "subiendo" : "bajando";
+        direccion = (pisoDestino > pisoActual) ? "Subiendo" : "Bajando";
 
         while (pisoActual != pisoDestino) {
-            pisoActual += (direccion.equals("subiendo")) ? 1 : -1;
+            pisoActual += (direccion.equals("Subiendo")) ? 1 : -1;
             System.out.println("Ascensor " + direccion + "... Piso actual: " + pisoActual);
             try { Thread.sleep(800); } catch (InterruptedException e) {}
         }
 
-        direccion = "ninguna";
+        direccion = "Ninguna";
         puerta.abrirPuerta();
         System.out.println("Llegaste al piso " + pisoActual);
     }
