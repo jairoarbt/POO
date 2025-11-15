@@ -9,21 +9,30 @@ public class Boton {
         this.iluminado = false;
     }
 
-    
     public void presionar() {
         System.out.println("Se presionó el botón " + nombre);
+        encender();
     }
 
     public void encender() {
-        iluminado = true;
-        System.out.println("Botón esta " + nombre + " encendido.");
+        if (!iluminado) {
+            iluminado = true;
+            System.out.println("Botón " + nombre + " encendido.");
+        }
     }
 
     public void apagar() {
-        iluminado = false;
-        System.out.println("Botón esta " + nombre + " apagado.");
+        if (iluminado) {
+            iluminado = false;
+            System.out.println("Botón " + nombre + " apagado.");
+        }
+    }
+
+    public boolean isIluminado() {
+        return iluminado;
     }
 }
+
 
 
 

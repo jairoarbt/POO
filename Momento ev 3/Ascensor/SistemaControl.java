@@ -27,21 +27,28 @@ public class SistemaControl {
                 case 1:
                     System.out.print("¿Desde qué piso llama el ascensor? ");
                     int pisoLlamada = sc.nextInt();
+
                     if (pisoLlamada >= 1 && pisoLlamada <= pisos.length) {
                         pisos[pisoLlamada - 1].presionarBotonLlamada(ascensor);
                     } else {
-                        System.out.println("Piso inválido.");
+                        System.out.println(" Piso inválido el edificio solo tiene " + pisos.length + " pisos");
                     }
                     break;
 
                 case 2:
                     System.out.print("¿A qué piso desea ir? ");
                     int pisoDestino = sc.nextInt();
-                    ascensor.irAPiso(pisoDestino);
+
+                    
+                    if (pisoDestino >= 1 && pisoDestino <= pisos.length) {
+                        ascensor.irAPiso(pisoDestino);
+                    } else {
+                        System.out.println("Ese piso no existe el edificio tiene pisos  " + pisos.length );
+                    }
                     break;
 
                 case 3:
-                    System.out.println("Saliendo del sistema...");
+                    System.out.println("Saliendo del edificio...");
                     break;
 
                 default:
@@ -50,4 +57,5 @@ public class SistemaControl {
         } while (opcion != 3);
     }
 }
+
 
