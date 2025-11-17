@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Boton {
     private String nombre;
     private boolean iluminado;
@@ -10,6 +12,25 @@ public class Boton {
     }
 
     public void presionar() {
+
+       Scanner sc = new Scanner(System.in);
+         boolean falloCorregido = false;
+        
+        while (!falloCorregido) {
+
+            double probabilidad = Math.random(); //Se añade para agregar una probabilidad de fallo al presionar un boton
+
+            if (probabilidad < 0.03 && iluminado) {
+                System.out.println(" ¡ALERTA! Fallo al presionar el boton " + nombre );
+                System.out.println("Vuelva a intentarlo");
+                System.out.println( "Presione enter para reintentar");
+                sc.nextLine();
+            }else{
+                falloCorregido = true; //si no hay fallo sale del ciclo
+            }
+
+        }
+
         System.out.println("Se presionó el botón " + nombre);
         encender();
     }

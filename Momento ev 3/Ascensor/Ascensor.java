@@ -27,7 +27,7 @@ public class Ascensor {
 
         direccion = "Ninguna";
         puerta.abrirPuerta();
-        System.out.println("Llegaste al piso " + pisoActual);
+        System.out.println("Llegaste al piso " + pisoActual); 
     }
 
     public int getPisoActual() {
