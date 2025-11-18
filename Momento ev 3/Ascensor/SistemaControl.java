@@ -11,7 +11,7 @@ public class SistemaControl {
             pisos[i] = new Piso(i + 1);
         }
     }
-
+    // método para  que el usuario interactue con el sistema de control del ascensor
     public void menuInteraccion() {
         Scanner sc = new Scanner(System.in);
         int opcion;
@@ -29,9 +29,11 @@ public class SistemaControl {
                     int pisoLlamada = sc.nextInt();
 
                     if (pisoLlamada >= 1 && pisoLlamada <= pisos.length) {
-                        pisos[pisoLlamada - 1].presionarBotonLlamada(ascensor);
+                        pisos[pisoLlamada - 1].presionarBotonLlamada(ascensor);  //Definiendo el piso de llamada
                     } else {
-                        System.out.println(" Piso inválido el edificio solo tiene " + pisos.length + " pisos");
+                        System.out.println(" Piso inválido el edificio solo tiene " + pisos.length + " pisos");  
+                        //Mensaje de error para seguir la logica de los pisos ya dados
+
                     }
                     break;
 
@@ -43,7 +45,9 @@ public class SistemaControl {
                     if (pisoDestino >= 1 && pisoDestino <= pisos.length) {
                         ascensor.irAPiso(pisoDestino);
                     } else {
-                        System.out.println("Ese piso no existe el edificio tiene pisos  " + pisos.length );
+                        System.out.println("Ese piso no existe el edificio tiene pisos  " + pisos.length ); 
+                        //mensaje de error para seguir la dimension en pisos ya definida
+                        
                     }
                     break;
 

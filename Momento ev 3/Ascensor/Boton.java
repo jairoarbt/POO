@@ -5,7 +5,7 @@ public class Boton {
     private boolean iluminado;
 
     public Boton() {}
-
+    //Constructor
     public Boton(String nombre) {
         this.nombre = nombre;
         this.iluminado = false;
@@ -16,13 +16,14 @@ public class Boton {
        Scanner sc = new Scanner(System.in);
          boolean falloCorregido = false;
         
+        //Bucle para simular fallo al presionar boton
         while (!falloCorregido) {
 
             double probabilidad = Math.random(); //Se añade para agregar una probabilidad de fallo al presionar un boton
 
             if (probabilidad < 0.03 && iluminado) {
                 System.out.println(" ¡ALERTA! Fallo al presionar el boton " + nombre );
-                System.out.println("Vuelva a intentarlo");
+                System.out.println("Vuelva a intentarlo"); //Si existe el fallo, la solucion es reintentar
                 System.out.println( "Presione enter para reintentar");
                 sc.nextLine();
             }else{
@@ -35,6 +36,7 @@ public class Boton {
         encender();
     }
 
+    //Metodo para encender y apagar boton
     public void encender() {
         if (!iluminado) {
             iluminado = true;

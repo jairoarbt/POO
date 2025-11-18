@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+//clase principal para ejecutar el ascensor
 public class EjecutarElevador {
     public static void main(String[] args) {
         System.out.println("--- Simulador Ascensor ---");
@@ -16,7 +17,8 @@ public class EjecutarElevador {
         Scanner sc = new Scanner(System.in);
         sc.nextLine();
         
-         System.out.println("Iniciando ascensor");
+        //Inicio del sistema ascensor
+        System.out.println("Iniciando ascensor");
         Edificio edificio = new Edificio();
 
         edificio.getSistemaControl().menuInteraccion();
